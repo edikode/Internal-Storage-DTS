@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ExternalStorageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/btnBuatFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUAT FILE" />
+
+        <Button
+            android:id="@+id/btnReadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BACA FILE" />
+
+        <Button
+            android:id="@+id/btnUpdateFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE FILE" />
+
+        <Button
+            android:id="@+id/btnDeleteFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HAPUS FILE" />
+
+        <TextView
+            android:id="@+id/textRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasil pembacaan data" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

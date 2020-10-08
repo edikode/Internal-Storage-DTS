@@ -12,9 +12,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.OutputStream;
 
-public class MainActivity extends AppCompatActivity {
+public class InternalStorageActivity extends AppCompatActivity {
 
     public static final String FILENAME = "namafile.txt";
     Button btnBuatFile, btnBacaFile, btnUbahFile, btnHapusFile;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_internal_storage);
 
         btnBuatFile = findViewById(R.id.btnBuatFile);
         btnBacaFile = findViewById(R.id.btnBacaFile);
@@ -50,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 hapusFile();
-
-                textBaca.setText("Isi File dihapus");
             }
         });
     }
@@ -61,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(file.exists()) {
             file.delete();
+
+            textBaca.setText("File berhasil dihapus");
         }
 
     }
@@ -93,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buatFile() {
+        // File ini akan tersimpan pada: data/data/com.edisiswanto.internalstorage
+        // Buka di Device File Explorer: menu View > Tool Windows > Device Explorer
+
         String isiFile = "Ini adalah isi dari file ini \n";
         File file = new File(getFilesDir(), FILENAME);
 
